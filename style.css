@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/4717.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    color: black;
+}
+
+.resort {
+    width: calc(50% - 40px);
+    margin: 0 30px 250px;
+    padding: 20px;
+    border: 1px solid #000;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(100, 100, 100, 0.7);
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.resort.visible {
+    opacity: 1;
+    transform: translateY(0);
+    /* Конечное положение элементов */
+}
+
+.resort-image {
+    width: 100px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+}
+
+#resort1 {
+    float: left;
+}
+
+#resort2 {
+    float: right;
+}
+
+#resort3 {
+    float: left;
+}
+
+#resort4 {
+    float: left;
+}
+
+#resort5 {
+    float: right;
+}
+
+#resort6 {
+    float: left;
+}
+
+#resort7 {
+    float: right;
+}
+
+.resort:hover {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+#overlay {
+    display: flex;
+    /* Используем flexbox для центрирования содержимого */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    /* Изначально оверлей прозрачный */
+    visibility: hidden;
+    /* Изначально оверлей не виден */
+    transition: opacity 1.5s, visibility 1.5s;
+    /* Плавный переход для opacity и visibility */
+    z-index: 9999;
+    /* Высокий z-index, чтобы быть над другими элементами */
+}
+
+#overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+#zoomed-image {
+    transition: transform 1.5s;
+    /* Плавный переход для transform */
+    transform: scale(0);
+    /* Изначально картинка уменьшена */
+}
+
+#overlay.active #zoomed-image {
+    transform: scale(0.7);
+    /* Конечное состояние: изображение в нормальном размере */
+}
+
+.text {
+    color: black;
+}
+
+.resort p {
+    color: black;
+    /* Исходный цвет текста */
+    transition: color 1.5s ease;
+    /* Плавный переход цвета текста */
+}
+
+.resort:hover p {
+    color: white;
+    /* Цвет текста при наведении */
+}
+
+
+/* Стандартное состояние элемента, когда он не в области видимости */
+.block {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Немного сместить элемент вниз */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    /* Плавное появление и смещение вверх */
+}
+
+/* Состояние элемента, когда он попадает в область видимости */
+.block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

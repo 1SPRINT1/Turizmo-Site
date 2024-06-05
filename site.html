@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туристический путеводитель</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Туристический путеводитель</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="resort" id="resort1">Мамев Курган
+        <img src="images/mamev.jfif" alt="Мамаев Курган" class="resort-image" onclick="zoomImage(this)">
+        <p id="text">
+            Данное место нужно посетить абсолютно всем
+        </p>
+    </div>
+    <div id="overlay" onclick="closeZoom()">
+        <img id="zoomed-image" src="#" alt="Увеличенное изображение">
+    </div>
+    <div class="resort" id="resort2">Музей Панорама
+        <img src="images/1280px-ST_battle_panorama_IMG_4238-4289-49_img-10K.jpg" alt="Музей панорама"
+            class="resort-image" onclick="zoomImage(this)">
+        <p>
+            Второе место по популярным достопремичательностям обязательно к посещению
+        </p>
+    </div>
+    <div class="resort" id="resort3">Дом Павлова
+        <img src="images/scale_2400.jfif" alt="Дом Павлова" class="resort-image" onclick="zoomImage(this)">
+        <p>
+            Третье место по популярным достопремичательностям обязательно к посещению
+        </p>
+    </div>
+    <div class="resort" id="resort4">Территория 3</div>
+    <div class="resort" id="resort5">Территория 3</div>
+    <div class="resort" id="resort6">Территория 3</div>
+    <div class="resort" id="resort7">Территория 3</div>
+    <script src="main.js"></script>
+</body>
+
+</html>
