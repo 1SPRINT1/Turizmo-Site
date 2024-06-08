@@ -48,7 +48,6 @@ p {
 .resort.visible {
     opacity: 1;
     transform: translateY(0);
-    /* Конечное положение элементов */
 }
 
 .resort-image {
@@ -89,7 +88,6 @@ p {
 
 #overlay {
     display: flex;
-    /* Используем flexbox для центрирования содержимого */
     position: fixed;
     top: 0;
     left: 0;
@@ -99,13 +97,9 @@ p {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    /* Изначально оверлей прозрачный */
     visibility: hidden;
-    /* Изначально оверлей не виден */
     transition: opacity 1.5s, visibility 1.5s;
-    /* Плавный переход для opacity и visibility */
     z-index: 9999;
-    /* Высокий z-index, чтобы быть над другими элементами */
 }
 
 #overlay.active {
@@ -116,14 +110,11 @@ p {
 
 #zoomed-image {
     transition: transform 1.5s;
-    /* Плавный переход для transform */
     transform: scale(0);
-    /* Изначально картинка уменьшена */
 }
 
 #overlay.active #zoomed-image {
     transform: scale(0.7);
-    /* Конечное состояние: изображение в нормальном размере */
 }
 
 .text {
@@ -132,28 +123,21 @@ p {
 
 .resort p {
     color: black;
-    /* Исходный цвет текста */
     transition: color 1.5s ease;
     font-size: 19px;
-    /* Плавный переход цвета текста */
 }
 
 .resort:hover p {
     color: white;
-    /* Цвет текста при наведении */
 }
 
 
-/* Стандартное состояние элемента, когда он не в области видимости */
 .block {
     opacity: 0;
     transform: translateY(20px);
-    /* Немного сместить элемент вниз */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    /* Плавное появление и смещение вверх */
 }
 
-/* Состояние элемента, когда он попадает в область видимости */
 .block.visible {
     opacity: 1;
     transform: translateY(0);
@@ -165,9 +149,7 @@ p {
     align-items: center;
     flex-wrap: wrap;
     width: 369px;
-    /* Установите ширину контейнера, чтобы картинки располагались в 2 ряда и 2 колонки */
     margin: 0 auto;
-    /* Центрирование контейнера по горизонтали */
 }
 
 .image-container img {
@@ -216,9 +198,7 @@ body[data-active="false"] {
 
 .hover-effect:hover {
     transform: scale(1.1);
-    /* Увеличение картинки на 10% при наведении */
     outline: 2px solid red;
-    /* Красная обводка */
 }
 
 @keyframes fadeIn {
