@@ -7,7 +7,20 @@ body {
     background-attachment: fixed;
 }
 
-h1,
+header {
+    position: relative;
+    top: -3vh;
+    left: -51vh;
+    width: 310vh;
+    height: 10vh;
+    background-color: rgba(91, 184, 4, 0.739);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
 h2 {
     text-align: center;
 }
