@@ -69,3 +69,18 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(block);
     });
 });
+function openTab(url) {
+    window.location.href = url;
+}
+function loadPage(pageUrl) {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var pageContent = document.getElementById('page-content');
+            pageContent.innerHTML = xhr.responseText;
+            pageContent.classList.add('active');
+        }
+    };
+    xhr.open('GET', pageUrl, true);
+    xhr.send();
+}

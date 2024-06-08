@@ -7,9 +7,11 @@ body {
     background-attachment: fixed;
 }
 
-h1 {
+h1,
+h2 {
     text-align: center;
 }
+
 
 p {
     color: black;
@@ -52,10 +54,6 @@ p {
 }
 
 #resort3 {
-    float: left;
-}
-
-#resort4 {
     float: left;
 }
 
@@ -123,6 +121,7 @@ p {
     color: black;
     /* Исходный цвет текста */
     transition: color 1.5s ease;
+    font-size: 19px;
     /* Плавный переход цвета текста */
 }
 
@@ -145,4 +144,86 @@ p {
 .block.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 369px;
+    /* Установите ширину контейнера, чтобы картинки располагались в 2 ряда и 2 колонки */
+    margin: 0 auto;
+    /* Центрирование контейнера по горизонтали */
+}
+
+.image-container img {
+    width: 128px;
+    height: 128px;
+    margin: 28px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.backImage {
+    width: 128px;
+    height: 128px;
+    margin: 40px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.transition-fade {
+    transition: .4s;
+    opacity: 1;
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+}
+
+body {
+    transition: all 0.5s ease;
+}
+
+body[data-active="true"] {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+body[data-active="false"] {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.hover-effect {
+    transition: transform 0.3s, outline 0.3s;
+    margin: 20px;
+}
+
+.hover-effect:hover {
+    transform: scale(1.1);
+    /* Увеличение картинки на 10% при наведении */
+    outline: 2px solid red;
+    /* Красная обводка */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
