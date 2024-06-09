@@ -72,3 +72,42 @@ function loadPage(pageUrl) {
     xhr.open('GET', pageUrl, true);
     xhr.send();
 }
+// тут опять же строчки именно для index.html 
+// для остальных я не оставляю комметарии так как там понятно что для остальных
+document.querySelectorAll('.font-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const fontSize = button.getAttribute('data-font-size');
+        document.querySelectorAll('*').forEach(element => {
+            // Пропускаем заголовки h1, h2, h3 и элемент с классом 'header'
+            if (element.tagName.toLowerCase() === 'h1' || element.tagName.toLowerCase() === 'h2' || element.tagName.toLowerCase() === 'h3' || element.classList.contains('header')) {
+                return;
+            }
+            element.style.fontSize = fontSize + 'px';
+        });
+    });
+});
+
+document.querySelector('.reset-font-button').addEventListener('click', () => {
+    document.querySelectorAll('*').forEach(element => {
+        // Пропускаем заголовки h1, h2, h3 и элемент с классом 'header'
+        if (element.tagName.toLowerCase() === 'h1' || element.tagName.toLowerCase() === 'h2' || element.tagName.toLowerCase() === 'h3' || element.classList.contains('header')) {
+            return;
+        }
+        element.style.fontSize = ''; // Сброс стиля размера шрифта
+    });
+});
+
+// Настройка для слабовидящих
+let isHighContrast = false;
+
+document.querySelector('.color-button').addEventListener('click', () => {
+    const body = document.body;
+    if (isHighContrast) {
+        body.classList.remove('high-contrast-colors');
+        body.classList.add('normal-colors');
+    } else {
+        body.classList.remove('normal-colors');
+        body.classList.add('high-contrast-colors');
+    }
+    isHighContrast = !isHighContrast; // Переключаем состояние
+});

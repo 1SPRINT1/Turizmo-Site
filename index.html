@@ -8,15 +8,22 @@
     <link rel="stylesheet" href="ss/style.css">
 </head>
 
-<header>
+<header class="header">
     <h1>Туристический путеводитель</h1>
+    <div class="button-container">
+        <button class="font-button" data-font-size="14">Шрифт 14</button>
+        <button class="font-button" data-font-size="23">Шрифт 18</button>
+        <button class="font-button" data-font-size="36">Шрифт 23</button>
+        <button class="reset-font-button">Сбросить шрифт</button>
+        <button class="color-button">Сменить цвета для слабовидящих</button>
+    </div>
 </header>
 
-<body data-active="true" class="mainBody">
+<body data-active="true">
     <br>
     <br>
     <br>
-    <h2>Нажмите чтобы начать путишествие на сайте</h2>
+    <h2 class="main-h2">Нажмите чтобы начать путишествие на сайте</h2>
     <br>
     <br>
     <br>
@@ -27,6 +34,7 @@
     </div>
 
     <script src="ss/main.js"></script>
+    <script src="ss/high-contrast-mode.js"></script>
 </body>
 
 </html>
