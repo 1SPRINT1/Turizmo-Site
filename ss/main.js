@@ -93,7 +93,7 @@ document.querySelector('.reset-font-button').addEventListener('click', () => {
         if (element.tagName.toLowerCase() === 'h1' || element.tagName.toLowerCase() === 'h2' || element.tagName.toLowerCase() === 'h3' || element.classList.contains('header')) {
             return;
         }
-        element.style.fontSize = ''; // Сброс стиля размера шрифта
+        element.style.fontSize = '';
     });
 });
 
