@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="ss/style.css">
 </head>
 
-<body data-active="true">
-    <header>
-        <h1>Туристический путеводитель</h1>
-    </header>
+<header>
+    <h1>Туристический путеводитель</h1>
+</header>
+
+<body data-active="true" class="mainBody">
     <br>
     <br>
     <br>
@@ -19,10 +20,12 @@
     <br>
     <br>
     <br>
-    <div class="image-container">
-        <img class="hover-effect" src="ss/images/1280px-ST_battle_panorama_IMG_4238-4289-49_img-10K.jpg"
-            alt="Картинка 1" onclick="openTab('ss/SiteNew.html')">
+    <div class="image-container" id="animatedButton">
+        <img class="hover-effect" id="buttonImage"
+            src="ss/images/1280px-ST_battle_panorama_IMG_4238-4289-49_img-10K.jpg" alt="Картинка 1"
+            onclick="openTab('ss/SiteNew.html')">
     </div>
+
     <script src="ss/main.js"></script>
 </body>
 
