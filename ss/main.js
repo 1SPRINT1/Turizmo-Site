@@ -22,15 +22,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 function zoomImage(imageElement) {
-    var overlay = document.getElementById('overlay');
     var zoomedImage = document.getElementById('zoomed-image');
     zoomedImage.src = imageElement.src;
+    var overlay = document.getElementById('overlay');
     overlay.classList.add('active');
 }
+
 function closeZoom() {
     var overlay = document.getElementById('overlay');
     overlay.classList.remove('active');
 }
+
 document.addEventListener('DOMContentLoaded', function () {
     var overlay = document.getElementById('overlay');
     overlay.addEventListener('click', closeZoom);

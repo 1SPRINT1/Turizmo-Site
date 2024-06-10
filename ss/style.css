@@ -1,6 +1,10 @@
 /* Тут стили для всех страниц -_- */
 body {
-    font-family: Arial, sans-serif;
+    @font-face {
+        font-family: MontserratAlternates-Regular;
+        src: url(ss/MontserratAlternates-Regular);
+    }
+
     background-color: rgba(rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), 0.8);
     background-size: cover;
     background-position: center;
@@ -132,7 +136,14 @@ p {
 }
 
 #overlay.active #zoomed-image {
-    transform: scale(0.7);
+    transform: scale(0.5);
+}
+
+@media (max-width: 768px) {
+    #overlay.active #zoomed-image {
+        transform: scale(0.25);
+        /* Уменьшенный масштаб для мобильных устройств */
+    }
 }
 
 .text {
@@ -294,6 +305,80 @@ button {
 
 .high-contrast-colors {
     /* Цвета для слабовидящих */
-    background-color: black;
+    background-color: rgb(167, 167, 167);
+    color: rgb(234, 255, 0);
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(91, 184, 4, 0.739);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    margin: 0;
+    flex-grow: 1;
+    /* Растягиваем заголовок, чтобы он занимал оставшееся пространство */
+    text-align: center;
+    /* Выравниваем текст по центру */
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container p {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.font-button,
+.reset-font-button,
+.color-button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    font-size: 14px;
+    border: none;
+    background-color: #10bc00;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.font-button:hover,
+.reset-font-button:hover,
+.color-button:hover {
+    background-color: #0056b3;
+}
+
+.header p {
     color: white;
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        /* Меняем направление flex-контейнера на столбец */
+        align-items: stretch;
+        /* Растягиваем элементы по ширине контейнера */
+    }
+
+    .button-container {
+        flex-direction: column;
+        /* Меняем направление flex-контейнера на столбец */
+        align-items: stretch;
+        /* Растягиваем элементы по ширине контейнера */
+    }
+
+    .button-container p {
+        margin: 10px 0;
+        /* Уменьшаем отступы для мобильных устройств */
+    }
 }
