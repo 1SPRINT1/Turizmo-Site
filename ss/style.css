@@ -12,12 +12,14 @@ body {
     background-attachment: fixed;
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 html {
     height: 100%;
     width: 100%;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 header {
@@ -29,6 +31,7 @@ header {
     -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -101,6 +104,10 @@ p {
 
 #resort7 {
     float: right;
+}
+
+#resort4 {
+    float: left;
 }
 
 .resort:hover {
@@ -226,6 +233,7 @@ body[data-active="false"] {
 .hover-effect {
     transition: transform 0.3s, outline 0.3s;
     margin: 20px;
+    outline: 15px solid rgba(91, 184, 4, 0.739);
 }
 
 .hover-effect:hover {
@@ -259,7 +267,7 @@ body[data-active="false"] {
     align-items: center;
     height: 200px;
     width: 200px;
-    background-color: rgba(128, 128, 128, 0.597);
+    background-color: rgba(91, 184, 4, 0.739);
     border-radius: 0;
     position: relative;
     margin: 50px auto;
@@ -299,13 +307,13 @@ button {
 /* Тут я буду использовать настройки для слабовидящих */
 .normal-colors {
     /* Обычные цвета */
-    background-color: white;
+    /* background-color: white;*/
     color: black;
 }
 
 .high-contrast-colors {
     /* Цвета для слабовидящих */
-    background-color: rgb(167, 167, 167);
+    /*background-color: rgb(167, 167, 167);*/
     color: rgb(234, 255, 0);
 }
 
@@ -326,6 +334,7 @@ button {
     /* Растягиваем заголовок, чтобы он занимал оставшееся пространство */
     text-align: center;
     /* Выравниваем текст по центру */
+    color: white;
 }
 
 .button-container {

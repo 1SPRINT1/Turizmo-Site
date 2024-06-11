@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.style.color = 'white';
             this.style.transform = 'scale(1.07)';
             this.style.zIndex = '1.75';
-            this.style.backgroundColor = '#3f51b5';
+            this.style.backgroundColor = '#5bb804';
             this.style.transition = 'background-color 2s ease';
         });
 
@@ -99,17 +99,22 @@ document.querySelector('.reset-font-button').addEventListener('click', () => {
     });
 });
 
-// Настройка для слабовидящих
 let isHighContrast = false;
 
 document.querySelector('.color-button').addEventListener('click', () => {
-    const body = document.body;
-    if (isHighContrast) {
-        body.classList.remove('high-contrast-colors');
-        body.classList.add('normal-colors');
-    } else {
-        body.classList.remove('normal-colors');
-        body.classList.add('high-contrast-colors');
-    }
+    const elementsWithText = document.querySelectorAll(':not(iframe)'); // Исключаем iframe
+
+    elementsWithText.forEach(element => {
+        if (element.textContent.trim().length > 0) { // Проверяем, что текст не пустой
+            if (isHighContrast) {
+                element.classList.remove('high-contrast-colors');
+                element.classList.add('normal-colors');
+            } else {
+                element.classList.remove('normal-colors');
+                element.classList.add('high-contrast-colors');
+            }
+        }
+    });
+
     isHighContrast = !isHighContrast; // Переключаем состояние
 });
