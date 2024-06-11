@@ -38,16 +38,19 @@ h1 {
     color: white;
     text-align: center;
     font-size: 2em;
+    text-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
     text-align: center;
     font-size: 1.5em;
+    text-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.5);
 }
 
 h3 {
     text-align: center;
     font-size: 1.2em;
+    text-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -59,15 +62,21 @@ p {
     width: calc(50% - 40px);
     margin: 0 30px 250px;
     padding: 20px;
-    border: 1px solid #000;
     transition: transform 0.3s ease;
     position: relative;
     overflow: hidden;
-    background-color: rgba(100, 100, 100, 0.7);
+    background-color: rgba(56, 115, 1, 0.739);
+    border-radius: 10px;
+    box-shadow: 9 13px 16px rgba(0, 0, 0, 0.1);
+    text-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.5);
 
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.resort p {
+    text-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.5);
 }
 
 .resort.visible {
@@ -234,11 +243,13 @@ body[data-active="false"] {
     transition: transform 0.3s, outline 0.3s;
     margin: 20px;
     outline: 15px solid rgba(91, 184, 4, 0.739);
+    box-shadow: 8px 10px 12px rgba(0, 0, 0, 0.1);
 }
 
 .hover-effect:hover {
     transform: scale(1.1);
     outline: 2px solid red;
+    box-shadow: 18px 20px 20px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes fadeIn {
@@ -317,6 +328,10 @@ button {
     color: rgb(234, 255, 0);
 }
 
+.main-h2 {
+    text-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.5);
+}
+
 
 .header {
     display: flex;
@@ -355,20 +370,23 @@ button {
     margin-right: 5px;
     font-size: 14px;
     border: none;
-    background-color: #10bc00;
-    color: rgb(255, 255, 255);
+    background-color: #ffffff;
+    color: rgba(91, 184, 4, 0.739);
     cursor: pointer;
     border-radius: 5px;
+    box-shadow: 8px 9px 9px rgba(0, 0, 0, 0.1);
+    text-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.5);
 }
 
 .font-button:hover,
 .reset-font-button:hover,
 .color-button:hover {
-    background-color: #0056b3;
+    background-color: rgba(91, 184, 4, 0.739);
 }
 
 .header p {
     color: white;
+    text-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 600px) {
