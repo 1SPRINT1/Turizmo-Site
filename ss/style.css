@@ -26,12 +26,13 @@ header {
     position: relative;
     background-color: rgba(91, 184, 4, 0.739);
     width: 98.98%;
-    padding: 15px 0;
+    padding: 20px;
     z-index: 100;
     -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
     overflow-x: hidden;
+    border-radius: 5px;
 }
 
 h1 {
@@ -387,25 +388,22 @@ button {
 .header p {
     color: white;
     text-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 @media (max-width: 600px) {
     .header {
         flex-direction: column;
-        /* Меняем направление flex-контейнера на столбец */
         align-items: stretch;
-        /* Растягиваем элементы по ширине контейнера */
+        padding: 20px;
     }
 
     .button-container {
         flex-direction: column;
-        /* Меняем направление flex-контейнера на столбец */
         align-items: stretch;
-        /* Растягиваем элементы по ширине контейнера */
     }
 
     .button-container p {
         margin: 10px 0;
-        /* Уменьшаем отступы для мобильных устройств */
     }
 }
