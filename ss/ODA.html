@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туристический путеводитель</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header class="header">
+    <h1>Туристический путеводитель</h1>
+    <div class="button-container">
+        <button class="font-button" data-font-size="12">-</button>
+        <p>Шрифт</p>
+        <button class="font-button" data-font-size="22">+</button>
+        <button class="reset-font-button">Сбросить шрифт</button>
+        <button class="color-button">Сменить цвета для слабовидящих</button>
+    </div>
+</header>
+
+<body>
+
+    <br>
+    <a href="SiteNew.html"><img src="images/back.png" alt="image" class="backImage"></a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="resort" id="resort1">ГБУК "Волгоградский музей изобразительных искусств им. И. И. Машкова"
+        <img src="images/Экран 11 для видящих.png" alt="Мамаев Курган" class="resort-image" onclick="zoomImage(this)">
+        <p id="text">
+            Адрес: г. Волгоград, пр-т им. В. И. Ленина, д.21 <br>
+            Часы работы: ПН – ВС с 10:00 до 18:00 <br>
+            Часы работы: ПН-ВС с 11:00 до 19:00
+            Входной билет – 400 рублей
+        </p>
+    </div>
+    <div id="overlay" onclick="closeZoom()">
+        <img id="zoomed-image" src="#" alt="Увеличенное изображение">
+    </div>
+    <div class="resort" id="resort2">ГБУК "Волгоградская филармония"
+        <img src="images/1280px-ST_battle_panorama_IMG_4238-4289-49_img-10K.jpg" alt="Музей панорама"
+            class="resort-image" onclick="zoomImage(this)">
+        <p>
+            Часы работы: с понедельника по воскресенье с 10.00-19.00 Без выходных <br>
+            Цена билетов: от 300 до 2500 руб. <br>
+            Адрес: г. Волгоград, ул. Набережная 62-й Армии, д.4
+
+        </p>
+    </div>
+    <div class="resort" id="resort3">ГБУК "Волгоградский театр юного зрителя"
+        <img src="images/scale_2400.jfif" alt="Дом Павлова" class="resort-image" onclick="zoomImage(this)">
+        <p>
+            Цена билетов: от 250 руб. <br>
+            Адрес: г. Волгоград, ул. Рабоче-Крестьянская, 42
+
+        </p>
+    </div>
+    <div class="resort" id="resort5">ГБУК "Волгоградский музыкально-драматический казачий театр"
+        <img src="images/scale_2400.jfif" alt="Дом Павлова" class="resort-image" onclick="zoomImage(this)">
+        <p>
+            Режим работы билетной кассы: <br>
+            Понедельник-воскресенье: с 08:00 до 20:00 <br>
+            Цена билетов : от 300 до 500 руб. <br>
+            Адрес: г. Волгоград, ул. Академическая, д.3
+
+        </p>
+    </div>
+    <div class="resort" id="resort6">ГБУК "Историко-этнографический и архитектурный музей-заповедник "Старая Сарепта"
+        <img src="images/scale_2400.jfif" alt="Дом Павлова" class="resort-image" onclick="zoomImage(this)">
+        <p>
+            Часы работы: ПН- ВС с 9:00 до 17:30 <br>
+            Кассы работают до 17:00 <br>
+            Обед с 12:30 до 13:00 <br>
+            Цена билетов на экскурсии:
+            Дети, льготники - от 200 до 500
+            Взрослые – от 300 до 600 <br>
+            Адрес: г. Волгоград, ул. Изобильная, д.10
+
+        </p>
+    </div>
+    <div class="resort" id="resort7">ГБУК "Волгоградский областной краеведческий музей"
+        <img src="images/scale_2400.jfif" alt="Дом Павлова" class="resort-image" onclick="zoomImage(this)">
+        <p>
+            Адрес: г. Волгоград, пр-т им. В. И. Ленина, д.5а <br>
+            Вторник – воскресенье: с 10:00 до 18:00.
+            Понедельник: выходной. <br>
+            Касса: до 17:30. <br>
+            350 руб./250 руб.
+            Экскурсионное обслуживание (от 2 до 9 человек)
+            600 руб./500 руб.
+
+        </p>
+    </div>
+    <div class="resort" id="resort4">ГБУК "Волгоградский областной театр кукол"
+        <img src="images/scale_2400.jfif" alt="Дом Павлова" class="resort-image" onclick="zoomImage(this)">
+        <p>
+            Адрес: г. Волгоград, ул. Коммунистическая, д.1 <br>
+            Режим работы кассы: Ежедневно с 9:00 до 18:30(перерыв с 14:00 до 14:30) <br>
+            Цены на билеты в выходные и будние дни
+            Большой зал: от 300 до 500 руб.
+            Малый зал: 350 руб. (рассадка свободная).
+
+        </p>
+    </div>
+    <br>
+    <script src="main.js"></script>
+</body>
+
+</html>

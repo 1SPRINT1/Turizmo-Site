@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туристический путеводитель</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header class="header">
+    <h1>Туристический путеводитель</h1>
+    <div class="button-container">
+        <button class="font-button" data-font-size="12">-</button>
+        <p>Шрифт</p>
+        <button class="font-button" data-font-size="22">+</button>
+        <button class="reset-font-button">Сбросить шрифт</button>
+        <button class="color-button">Сменить цвета для слабовидящих</button>
+    </div>
+</header>
+
+<body>
+
+    <br>
+    <a href="SiteNew.html"><img src="images/back.png" alt="image" class="backImage"></a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="resort" id="resort1">Интерактивный парк «Россия - моя история»
+        <img src="images/Экран 11 для видящих.png" alt="Мамаев Курган" class="resort-image" onclick="zoomImage(this)">
+        <p id="text">
+            Адрес: ул. Набережная им. 62-й Армии, 1б <br>
+            Режим работы: ВТ-ПТ - 10:00 - 18:00; <br>
+            СБ-ВС – 10:00-20:00, ПН- выходной день <br>
+            Контакты: +7 (8442) 97-91-88
+        </p>
+    </div>
+    <div id="overlay" onclick="closeZoom()">
+        <img id="zoomed-image" src="#" alt="Увеличенное изображение">
+    </div>
+    <div class="resort" id="resort2">Ротонда
+        <img src="images/1280px-ST_battle_panorama_IMG_4238-4289-49_img-10K.jpg" alt="Музей панорама"
+            class="resort-image" onclick="zoomImage(this)">
+        <p>
+            Адрес: Верхняя терраса Центральной Набережной им. 62-й Армии <br>
+            Режим работы: Круглосуточно
+        </p>
+    </div>
+    <div class="resort" id="resort3">Центральная набережная им. 62-й Армии
+        <img src="images/scale_2400.jfif" alt="Дом Павлова" class="resort-image" onclick="zoomImage(this)">
+        <p>
+            Адрес: Набережная 62-й Армии <br>
+            Режим работы: Круглосуточно
+
+        </p>
+    </div>
+    <div class="resort" id="resort5">Фонтан «Искусство»
+        <img src="images/scale_2400.jfif" alt="Дом Павлова" class="resort-image" onclick="zoomImage(this)">
+        <p>
+            Адрес: Верхняя терраса Центральной Набережной им. 62-й Армии <br>
+            Режим работы: Круглосуточно
+        </p>
+    </div>
+    <div class="resort" id="resort6">Пропилеи
+        <img src="images/scale_2400.jfif" alt="Дом Павлова" class="resort-image" onclick="zoomImage(this)">
+        <p>
+            Адрес: Верхняя терраса Центральной Набережной им. 62-й Армии <br>
+            Режим работы: Круглосуточно
+
+        </p>
+    </div>
+    <div class="resort" id="resort7">Музей-панорама «Сталинградская битва»
+        <img src="images/scale_2400.jfif" alt="Дом Павлова" class="resort-image" onclick="zoomImage(this)">
+        <p>
+            Адрес: ул. Маршала Чуйкова, 47 <br>
+            Режим работы: ВТ - ВС 10:00 - 18:00, СБ 10:00 - 20:00 <br>
+            Контакт: +7 (8442) 55-00-83
+        </p>
+    </div>
+    <div class="resort" id="resort4">Руины мельницы Гергардта
+        <img src="images/scale_2400.jfif" alt="Дом Павлова" class="resort-image" onclick="zoomImage(this)">
+        <p>
+            Адрес: ул. им. Маршала В.И. Чуйкова, 47 <br>
+            Контакты: +7 (8442) 55-00-83
+        </p>
+    </div>
+    <br>
+    <script src="main.js"></script>
+</body>
+
+</html>
