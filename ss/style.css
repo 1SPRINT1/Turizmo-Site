@@ -25,7 +25,7 @@ html {
 header {
     position: relative;
     background-color: rgba(64, 130, 3, 0.739);
-    width: 98.98%;
+    width: 98%;
     padding: 20px;
     z-index: 100;
     -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
@@ -36,7 +36,7 @@ header {
 }
 
 h1 {
-    color: white;
+    color: black;
     text-align: center;
     font-size: 2em;
     text-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.5);
@@ -61,7 +61,7 @@ p {
 
 .resort {
     width: calc(50% - 40px);
-    margin: 0 30px 250px;
+    margin: 0 30px 130px;
     padding: 20px;
     transition: transform 0.3s ease;
     position: relative;
