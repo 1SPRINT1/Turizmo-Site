@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
-function zoomImage(imageElement) {
+function zoomImage(resortElement) {
+    var imageElement = resortElement.querySelector('.resort-image');
     var zoomedImage = document.getElementById('zoomed-image');
     zoomedImage.src = imageElement.src;
     var overlay = document.getElementById('overlay');
@@ -80,7 +81,6 @@ document.querySelectorAll('.font-button').forEach(button => {
     button.addEventListener('click', () => {
         const fontSize = button.getAttribute('data-font-size');
         document.querySelectorAll('*').forEach(element => {
-            // Пропускаем заголовки h1, h2, h3 и элемент с классом 'header'
             if (element.tagName.toLowerCase() === 'h1' || element.tagName.toLowerCase() === 'h2' || element.tagName.toLowerCase() === 'h3' || element.classList.contains('header')) {
                 return;
             }
@@ -91,7 +91,6 @@ document.querySelectorAll('.font-button').forEach(button => {
 
 document.querySelector('.reset-font-button').addEventListener('click', () => {
     document.querySelectorAll('*').forEach(element => {
-        // Пропускаем заголовки h1, h2, h3 и элемент с классом 'header'
         if (element.tagName.toLowerCase() === 'h1' || element.tagName.toLowerCase() === 'h2' || element.tagName.toLowerCase() === 'h3' || element.classList.contains('header')) {
             return;
         }
@@ -102,10 +101,10 @@ document.querySelector('.reset-font-button').addEventListener('click', () => {
 let isHighContrast = false;
 
 document.querySelector('.color-button').addEventListener('click', () => {
-    const elementsWithText = document.querySelectorAll(':not(iframe)'); // Исключаем iframe
+    const elementsWithText = document.querySelectorAll(':not(iframe)');
 
     elementsWithText.forEach(element => {
-        if (element.textContent.trim().length > 0) { // Проверяем, что текст не пустой
+        if (element.textContent.trim().length > 0) {
             if (isHighContrast) {
                 element.classList.remove('high-contrast-colors');
                 element.classList.add('normal-colors');
@@ -116,5 +115,5 @@ document.querySelector('.color-button').addEventListener('click', () => {
         }
     });
 
-    isHighContrast = !isHighContrast; // Переключаем состояние
+    isHighContrast = !isHighContrast;
 });
